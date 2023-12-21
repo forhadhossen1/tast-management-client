@@ -1,8 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
 import Swal from "sweetalert2";
-import GoogleLogin from "../../Component/SocialLogin/GoogleLogin";
 import useAuth from "../../Hooks/useAuth";
+import GoogleLogin from "../../Component/SocialLogin/GoogleLogin";
 
 const Login = () => {
     const { signIn } = useAuth();

@@ -1,8 +1,8 @@
 
 import { useForm } from "react-hook-form";
-import GoogleLogin from "../../Component/SocialLogin/GoogleLogin";
 import { Link} from "react-router-dom";
 import useAuth from "../../Hooks/useAuth"
+import GoogleLogin from "../../Component/SocialLogin/GoogleLogin";
 
 
 const SignUp = () => {
