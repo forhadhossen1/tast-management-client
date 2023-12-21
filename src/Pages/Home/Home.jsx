@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import Beneficiary from "./Beneficiary";
+import Footer from "./Footer";
 import GetStart from "./GetStart";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
          <Banner></Banner>
          <Beneficiary></Beneficiary>
          <GetStart></GetStart>
+         <Footer></Footer>
         </div>
     );
 };
