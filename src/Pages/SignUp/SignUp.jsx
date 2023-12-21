@@ -1,37 +1,39 @@
 
 import { useForm } from "react-hook-form";
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import useAuth from "../../Hooks/useAuth"
 import GoogleLogin from "../../Component/SocialLogin/GoogleLogin";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
-    // const navigate = useNavigate();
-    // const axiosPublic = useAxiosPublic();
-    const { createUser } = useAuth()
+    const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
+    const { createUser, updateUserProfile } = useAuth()
 
     const onSubmit = (data) => {
         console.log(data);
         createUser(data.email, data.password)
             .then(result => {
                 console.log(result.user)
-                    // updateUserProfile(data.name, data?.photoUrl)
-                    //     .then(() => {
-                    //         const userInfo = {
-                    //             name: data.name,
-                    //             email: data.email,
-                    //         }
-                    //         axiosPublic.post('/users', userInfo)
-                    //             .then(res => {
-                    //                 if (res.data.insertedId) {
-                    //                     reset();
-                    //                     Swal.fire("User created Successfully");
-                    //                     navigate('/')
-                    //                 }
-                    //             })
+                    updateUserProfile(data.name, data?.photoUrl)
+                        .then(() => {
+                            const userInfo = {
+                                name: data.name,
+                                email: data.email,
+                            }
+                            axiosPublic.post('/users', userInfo)
+                                .then(res => {
+                                    if (res.data.insertedId) {
+                                        reset();
+                                        Swal.fire("User created Successfully");
+                                        navigate('/')
+                                    }
+                                })
 
-                    //     })
+                        })
                     .catch(error => console.log(error))
             })
             .catch(error => {
