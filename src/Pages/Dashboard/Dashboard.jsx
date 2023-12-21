@@ -26,10 +26,12 @@ const Dashboard = () => {
         if (taskRes.data.insertedId) {
             reset();
             Swal.fire({
-                title: "Success",
-                text: `${data.name} is added to the post.`,
-                icon: "success"
-            });
+                position: "top-end",
+                icon: "success",
+                title: `${data.title} is added to the post.`,
+                showConfirmButton: false,
+                timer: 1000
+              });
         }
 
 
@@ -48,14 +50,14 @@ const Dashboard = () => {
                 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                     <div className="modal-box">
                         <div>
-                            <h2 className="text-4xl font-bold text-center py-4 block tracking-normal antialiased relative text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Add Post</h2>
+                            <h2 className="text-4xl font-bold text-center py-4 block tracking-normal antialiased relative text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Add Task</h2>
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                 <div className="form-control w-full ">
                                     <label className="label">
                                         <span className="label-text font-bold">Deadlines*</span>
                                     </label>
                                     <input {...register("name", { required: true })}
-                                        type="text" placeholder="Recipe name" className="input input-bordered w-full " />
+                                        type="date" placeholder="deadline." className="input input-bordered w-full " />
 
                                 </div>
 
@@ -78,9 +80,9 @@ const Dashboard = () => {
                                         <select defaultValue='default' {...register('tag', { required: true })}
                                             className="select select-bordered w-full ">
                                             <option disabled value='default'>Select a Priority</option>
-                                            <option value='sports'>Low</option>
-                                            <option value='business'>Moderate</option>
-                                            <option value='program'>Hight</option>
+                                            <option value='low'>Low</option>
+                                            <option value='moderate'>Moderate</option>
+                                            <option value='high'>High</option>
                                         </select>
                                     </div>
 
@@ -106,6 +108,11 @@ const Dashboard = () => {
                                 {/* <input  className="btn btn-block" type="submit" /> */}
                                 <button className="btn btn-block bg-gradient-to-r from-orange-400 to-red-600" >Add Task </button>
                             </form>
+
+                            <form className="fixed top-2 right-3 bg-slate-400 rounded-md">
+                                <button className="btn-sm">Close</button>
+                            </form>
+
                         </div>
                     </div>
                 </dialog>
