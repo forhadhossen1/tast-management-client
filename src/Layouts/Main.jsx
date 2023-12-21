@@ -3,7 +3,7 @@ import Navbar from "../Pages/Home/Navbar";
 
 const Main = () => {
     return (
-        <div>
+        <div className="md:container md:mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>
