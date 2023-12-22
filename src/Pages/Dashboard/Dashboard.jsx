@@ -131,7 +131,7 @@ const Dashboard = () => {
                 <div className=" bg-gray-100 p-4 rounded">
                     <h3 className="text-xl font-semibold mb-4">Ongoing</h3>
                     {/* Placeholder tasks */}
-                    <div className="bg-white p-2 mb-2 rounded">Task 3</div>
+      
                     {/* Add logic to display tasks */}
                 </div>
 

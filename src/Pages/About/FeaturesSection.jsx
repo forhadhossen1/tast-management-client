@@ -1,4 +1,3 @@
-import Footer from "../Home/Footer";
 
 const FeaturesSection = () => {
     return (
