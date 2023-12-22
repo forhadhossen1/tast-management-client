@@ -3,6 +3,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import UserProfile from "./UserProfile";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
+import AllTask from "../../Component/AllTask/AllTask";
 
 
 const Dashboard = () => {
@@ -123,9 +124,7 @@ const Dashboard = () => {
                 <div className=" bg-gray-100 p-4 rounded">
                     <h3 className="text-xl font-semibold mb-4">To-Do</h3>
                     {/* Placeholder tasks */}
-                    <div className="bg-white p-2 mb-2 rounded">Task 1</div>
-                    <div className="bg-white p-2 mb-2 rounded">Task 2</div>
-                    {/* Add logic to display tasks */}
+                   <AllTask></AllTask>
                 </div>
 
                 {/* Doing Section */}

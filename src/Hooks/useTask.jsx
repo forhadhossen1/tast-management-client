@@ -6,15 +6,15 @@ const useTask = () => {
     const axiosPublic = useAxiosPublic();
     const { user } = useAuth();
 
-    const {data: allTask =[], refetch} = useQuery({
-        queryKey : ['allTask', user?.email],
-        queryFn: async() => {
-            const res = await axiosPublic.get(`/allTask?email=${user?.email}`)
+    const {isLoading, data: allTask = [], refetch } = useQuery({
+        queryKey: ['allTask', [user?.email]], // Wrap user?.email in an array
+        queryFn: async () => {
+            const res = await axiosPublic.get(`/all-Task?email=${user?.email}`);
             console.log(res);
             return res.data;
-        }
-    })
-    return [refetch, allTask]
+        },
+    });
+    return [isLoading,allTask, refetch ]
 };
 
 export default useTask;
