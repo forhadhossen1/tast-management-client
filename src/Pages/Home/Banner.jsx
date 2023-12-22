@@ -18,7 +18,7 @@ const Banner = () => {
 
                             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
 
-                                <Link to=''>
+                                <Link to='/dashboard'>
                                     <button className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-100">
                                         Lets Explor
                                     </button></Link>

@@ -18,7 +18,7 @@ const UserProfile = () => {
 
     }
     return (
-        <div className="flex flex-col min-h-[200px]items-center justify-center bg-gray-200">
+        <div className="flex flex-col min-h-[200px]items-center justify-center">
 
             <div className="flex justify-center py-2">
                 {user && user?.photoURL ? (
