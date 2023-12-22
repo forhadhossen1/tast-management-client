@@ -57,7 +57,7 @@ const Dashboard = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">Deadlines*</span>
                                     </label>
-                                    <input {...register("name", { required: true })}
+                                    <input {...register("time", { required: true })}
                                         type="date" placeholder="deadline." className="input input-bordered w-full " />
 
                                 </div>
