@@ -32,7 +32,7 @@ const Dashboard = () => {
                 title: `${data.title} is added to the post.`,
                 showConfirmButton: false,
                 timer: 1000
-              });
+            });
         }
 
 
@@ -121,22 +121,25 @@ const Dashboard = () => {
 
             <div className="grid gap-3 grid-cols-1 md:grid-cols-3 py-8">
                 {/* To-Do Section */}
-                <div className=" bg-gray-100 p-4 rounded">
+                <div data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom" className=" bg-gray-100 p-4 rounded">
                     <h3 className="text-xl font-semibold mb-4">To-Do</h3>
                     {/* Placeholder tasks */}
-                   <AllTask></AllTask>
+                    <AllTask></AllTask>
                 </div>
 
                 {/* Doing Section */}
-                <div className=" bg-gray-100 p-4 rounded">
+                <div data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom" className=" bg-gray-100 p-4 rounded">
                     <h3 className="text-xl font-semibold mb-4">Ongoing</h3>
                     {/* Placeholder tasks */}
-      
+
                     {/* Add logic to display tasks */}
                 </div>
 
                 {/* Completed Section */}
-                <div className=" bg-gray-100 p-4 rounded">
+                <div data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom" className=" bg-gray-100 p-4 rounded">
                     <h3 className="text-xl font-semibold mb-4">Completed</h3>
                     {/* Placeholder tasks */}
                     <div className="bg-white p-2 mb-2 rounded">Task 4</div>

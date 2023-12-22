@@ -8,7 +8,9 @@ const AboutPage = () => {
             {/* Introduction Section */}
             <section className=" py-6">
                 <h1 className="text-5xl text-center font-bold mb-4">Welcome to TaskManager</h1>
+                <div className="flex justify-center">
                 <img src="https://i.ibb.co/SJp82cP/aboutUs1.jpg" alt="" />
+                </div>
 
 
                 <div className="py-7 ">

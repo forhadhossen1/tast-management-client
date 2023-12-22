@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AboutPage from "../Pages/About/AboutPage";
+import PrivetRout from "./PrivetRout";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <PrivetRout><Dashboard></Dashboard></PrivetRout>
             },
             {
-                path : '/about',
-                element : <AboutPage></AboutPage>
+                path: '/about',
+                element: <PrivetRout><AboutPage></AboutPage></PrivetRout>
             }
         ]
     },
